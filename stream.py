@@ -9,6 +9,7 @@ CORS(app)
 @app.route("/<path:link>")
 def generateLink(link):
 	streams = streamlink.streams(link)
+	print streams
 	return streams['best'].url
 
 if __name__ == '__main__':
