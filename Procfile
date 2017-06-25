@@ -1,1 +1,1 @@
-web: FLASK_APP=stream.py flask run
+web: python stream.py
