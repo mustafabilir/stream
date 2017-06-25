@@ -50,7 +50,7 @@ def crossdomain(origin=None, methods=None, headers=None,
 app = Flask(__name__)
 
 @app.route("/<path:link>")
-@crossdomain(origin='http://www.mustafabilir.com')
+@crossdomain(origin='*')
 def generateLink(link):
 	streams = streamlink.streams(link)
 	return streams['best'].url
